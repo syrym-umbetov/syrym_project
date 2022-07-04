@@ -1,0 +1,16 @@
+.category__list {
+  display: inline;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.category__list:hover .menu-sub {
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+  .category__list {
+    display: flex;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,31 @@
+.big-parent {
+  display: flex;
+}
+
+.right-parent {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: lightgrey;
+  box-shadow: 10px 5px 5px rgb(39, 38, 38);
+  padding: 50px;
+  font-size: 20px;
+  margin-top: 85px;
+  width: 200px;
+}
+
+.parent-right-parent {
+  margin-left: auto;
+}
+.left-parent {
+  display: 'flex';
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+.colors {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 0.1px solid black;
+}
