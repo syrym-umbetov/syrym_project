@@ -45,15 +45,9 @@ const Card: FC<CardProps> = ({ item }) => {
     increaseCartQuantity,
     decreaseCartQuantity,
     removeFromCart,
-    cartItems,
   } = useShoppingCart();
 
-  const {
-    clearFavourites,
-    removeFromFavourites,
-    AddToFavourites,
-    favouritesItems,
-  } = useFavourites();
+  const { AddToFavourites, favouritesItems } = useFavourites();
   console.log(favouritesItems);
   const quantity = getItemQuantity(+item.articleCodes[0]);
 
@@ -76,25 +70,20 @@ const Card: FC<CardProps> = ({ item }) => {
           />
 
           <Tooltip title='Add to favourites'>
-            <IconButton
-              aria-label='delete'
-              size='small'
-              onClick={() => AddToFavourites(+item.articleCodes[0])}
-              sx={{ position: 'absolute' }}
-            >
-              <FavoriteIcon
-                sx={{
-                  marginLeft: '10px',
-                  marginTop: '10px',
-                  transform: 'scale(1.3)',
-                  cursor: 'pointer',
-                  opacity: '0.5',
-                  color: '#CC071E',
+            <FavoriteIcon
+              sx={{
+                position: 'absolute',
+                marginLeft: '10px',
+                marginTop: '10px',
+                transform: 'scale(1.3)',
+                cursor: 'pointer',
+                opacity: '0.5',
+                color: '#CC071E',
 
-                  '&:hover': { transform: 'scale(1.5)', opacity: '1' },
-                }}
-              />
-            </IconButton>
+                '&:hover': { transform: 'scale(1.5)', opacity: '1' },
+              }}
+              onClick={() => AddToFavourites(+item.articleCodes[0])}
+            />
           </Tooltip>
         </div>
       </ImageWrapper>

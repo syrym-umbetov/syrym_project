@@ -11,7 +11,7 @@ const Favourites = () => {
   return (
     <div>
       {favouritesItems && favouritesItems.map((item) => <div>{item}</div>)}
-      yo
+      Favourites
     </div>
   );
 };
