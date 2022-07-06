@@ -9,11 +9,6 @@ import { useShoppingCart } from '../../context/ShoppingCartContext';
 import { Button, Badge, Tooltip } from '@mui/material';
 import BasicModal from '../Modal';
 import { ReactComponent as Logo } from '../../utils/logo.svg';
-import { CounterState } from '../../store/features/cart/cartSlice';
-
-export interface store {
-  cart: CounterState;
-}
 
 const Navbar = () => {
   const { openCart, cartQuantity } = useShoppingCart();

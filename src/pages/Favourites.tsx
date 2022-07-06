@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import FavouritesItemCard from '../components/FavouritesItemCard';
 import { useFavourites } from '../context/FavouritesContext';
 
 const Favourites = () => {
-  const {
-    clearFavourites,
-    removeFromFavourites,
-    AddToFavourites,
-    favouritesItems,
-  } = useFavourites();
+  const { favouritesItems } = useFavourites();
+
   return (
     <div>
-      {favouritesItems && favouritesItems.map((item) => <div>{item}</div>)}
-      Favourites
+      {favouritesItems &&
+        favouritesItems.map((id) => <FavouritesItemCard key={id} id={id} />)}
+      Опять рисует
+      <hr />
     </div>
   );
 };

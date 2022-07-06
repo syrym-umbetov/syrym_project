@@ -8,10 +8,11 @@ import Favourites from './pages/Favourites';
 import ProductDetail from './pages/ProductDetail';
 import Search from './pages/Search';
 import CategoryPage from './pages/CategoryPage';
+import { FavouritesProvider } from './context/FavouritesContext';
 
 function App() {
   return (
-    <ShoppingCartProvider>
+    <>
       <Navbar />
       <Routes>
         <Route path='/' element={<Homepage />} />
@@ -21,7 +22,7 @@ function App() {
         <Route path='/en_us/search-results.html' element={<Search />} />
         <Route path='/categories/:id/:id/:id' element={<CategoryPage />} />
       </Routes>
-    </ShoppingCartProvider>
+    </>
   );
 }
 

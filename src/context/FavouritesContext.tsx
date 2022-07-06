@@ -5,7 +5,7 @@ import Favourites from '../pages/Favourites';
 type FavouritesType = {
   clearFavourites: () => void;
   removeFromFavourites: (id: number) => void;
-  AddToFavourites: (id: number) => void;
+  addToFavourites: (id: number) => void;
   favouritesItems: number[];
 };
 
@@ -20,16 +20,18 @@ export function useFavourites() {
 }
 
 export function FavouritesProvider({ children }: FavouritesProviderProps) {
-  const [favouritesItems, setFavouritesItems] = useState<number[]>([]);
+  const [favouritesItems, setFavouritesItems] = useLocalStorage<number[]>(
+    'favourites',
+    []
+  );
 
-  function AddToFavourites(id: number) {
-    if (favouritesItems.find((item) => item === id) == null) {
-      setFavouritesItems([...favouritesItems, id]);
-    }
-  }
+  const addToFavourites = (id: number) => {
+    if (!favouritesItems.includes(id))
+      setFavouritesItems(favouritesItems.concat(id));
+  };
   function removeFromFavourites(id: number) {
     setFavouritesItems((currItems) => {
-      return currItems.filter((item) => item !== id);
+      return currItems?.filter((item) => item !== id);
     });
   }
   const clearFavourites = () => {
@@ -40,12 +42,11 @@ export function FavouritesProvider({ children }: FavouritesProviderProps) {
       value={{
         clearFavourites,
         removeFromFavourites,
-        AddToFavourites,
+        addToFavourites,
         favouritesItems,
       }}
     >
       {children}
-      <Favourites />
     </FavouritesContext.Provider>
   );
 }

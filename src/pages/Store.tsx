@@ -6,13 +6,16 @@ import { categoriesOptions } from '../utils/fetchData';
 import { fetchData } from './../utils/fetchData';
 import { Pagination, SelectChangeEvent } from '@mui/material';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-
 import SortingDrawer from './../components/SortingDrawer/SortingDrawer';
 import SortBy from '../components/SortingDrawer/SortBy';
 import { api } from '../api';
 import { sortByArray } from '../utils/variables';
 import Loader from '../components/Loader/Loader';
 import { Category, Data } from '../types';
+
+export type state = {
+  counter: number;
+};
 
 const Store = () => {
   const [data, setData] = useState<Data | undefined>();
@@ -126,6 +129,7 @@ const Store = () => {
           </ul>
         )}
       </div>
+
       <div className='sortby'>
         <SortBy
           sort={sort}

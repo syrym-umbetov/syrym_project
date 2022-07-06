@@ -45,10 +45,11 @@ const Card: FC<CardProps> = ({ item }) => {
     increaseCartQuantity,
     decreaseCartQuantity,
     removeFromCart,
+    cartItems,
   } = useShoppingCart();
 
-  const { AddToFavourites, favouritesItems } = useFavourites();
-  console.log(favouritesItems);
+  const { addToFavourites, favouritesItems } = useFavourites();
+
   const quantity = getItemQuantity(+item.articleCodes[0]);
 
   return (
@@ -82,7 +83,7 @@ const Card: FC<CardProps> = ({ item }) => {
 
                 '&:hover': { transform: 'scale(1.5)', opacity: '1' },
               }}
-              onClick={() => AddToFavourites(+item.articleCodes[0])}
+              onClick={() => addToFavourites(+item.articleCodes[0])}
             />
           </Tooltip>
         </div>
