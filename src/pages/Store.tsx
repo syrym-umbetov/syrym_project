@@ -61,6 +61,7 @@ const Store = () => {
     };
 
   const handleSort = (event: SelectChangeEvent) => {
+    console.log('asd');
     setSort(event.target.value);
   };
 
@@ -124,7 +125,7 @@ const Store = () => {
         ) : (
           <ul className='sidebar'>
             {categories.map((category: Category) => (
-              <Sidebar category={category} />
+              <Sidebar key={category.CatName} category={category} />
             ))}
           </ul>
         )}
@@ -169,7 +170,10 @@ const Store = () => {
         <>
           <div className='store-parent'>
             <div className='store'>
-              {data && data.results.map((item) => <Card item={item} />)}
+              {data &&
+                data.results.map((item) => (
+                  <Card key={item.articleCodes[0]} item={item} />
+                ))}
             </div>
           </div>
 

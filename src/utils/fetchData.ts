@@ -8,7 +8,7 @@ export const productsOptions = {
     pagesize: '50',
   },
   headers: {
-    'X-RapidAPI-Key': 'b32eb43a76msh027c61529c7d35ap1f27bdjsn75558f4a0f9f',
+    'X-RapidAPI-Key': '964cd5e2a6msh496f722349b2e54p1092a3jsna97717d0d003',
     'X-RapidAPI-Host': 'apidojo-hm-hennes-mauritz-v1.p.rapidapi.com',
   },
 };
@@ -25,13 +25,14 @@ export const productsOptions = {
 // bf3502492dmsh61dd5bf7c257794p1ab8b8jsnc316c9a49a82 syrymumbetov@yandex.kz
 // 1ad1dd7f40mshbf5b9005b9bf608p14e60djsn82870f1e3b57 umbetov.syrym@yandex.kz
 // b32eb43a76msh027c61529c7d35ap1f27bdjsn75558f4a0f9f umbetovsyrym@yandex.kz
+// 964cd5e2a6msh496f722349b2e54p1092a3jsna97717d0d003 umbetov.syrymumbetov@yandex.kz
 
 export const detailOptions = {
   method: 'GET',
   url: 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/detail',
   params: { lang: 'en', productcode: '0839915011', country: 'us' },
   headers: {
-    'X-RapidAPI-Key': 'b32eb43a76msh027c61529c7d35ap1f27bdjsn75558f4a0f9f',
+    'X-RapidAPI-Key': '964cd5e2a6msh496f722349b2e54p1092a3jsna97717d0d003',
     'X-RapidAPI-Host': 'apidojo-hm-hennes-mauritz-v1.p.rapidapi.com',
   },
 };
@@ -41,7 +42,7 @@ export const categoriesOptions = {
   url: 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/categories/list',
   params: { lang: 'en', country: 'us' },
   headers: {
-    'X-RapidAPI-Key': 'b32eb43a76msh027c61529c7d35ap1f27bdjsn75558f4a0f9f',
+    'X-RapidAPI-Key': '964cd5e2a6msh496f722349b2e54p1092a3jsna97717d0d003',
     'X-RapidAPI-Host': 'apidojo-hm-hennes-mauritz-v1.p.rapidapi.com',
   },
 };

@@ -80,10 +80,10 @@ export default function ShoppingCart({ isOpen }: ShoppingCartProps) {
         <Divider />
         <Stack gap={3}>
           {cartItems.map((item) => (
-            <>
-              <CartItem key={item.id} {...item} />
+            <div key={item.id}>
+              <CartItem {...item} />
               <div style={{ borderBottom: '1px solid black' }}></div>
-            </>
+            </div>
           ))}
           {loadingProducts ? (
             <div

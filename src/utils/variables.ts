@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import { Sort } from '../types';
 
 export const sortByArray: Sort = {
@@ -9,3 +10,10 @@ export const sortByArray: Sort = {
     { displayedName: 'NEWEST', value: 'newProduct' },
   ],
 };
+
+export const ImageWrapper = styled('div')`
+  width: 100%;
+  img {
+    width: 100%;
+  }
+`;

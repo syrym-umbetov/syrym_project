@@ -4,12 +4,14 @@ export type Favourite = {
   id: number;
 };
 
-export type FavouriteItems = {
+export type InitialState = {
   favouritesItems: Favourite[];
+  products: [];
 };
 
-const initialState: FavouriteItems = {
+const initialState: InitialState = {
   favouritesItems: [],
+  products: [],
 };
 
 export function favourites(state = initialState, action: any) {
@@ -29,6 +31,8 @@ export function favourites(state = initialState, action: any) {
         ];
       }
       break;
+    default:
+      return state;
   }
   return newState;
 }

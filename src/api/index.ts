@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = 'b32eb43a76msh027c61529c7d35ap1f27bdjsn75558f4a0f9f';
+const API_KEY = '964cd5e2a6msh496f722349b2e54p1092a3jsna97717d0d003';
 const API_HOST = 'apidojo-hm-hennes-mauritz-v1.p.rapidapi.com';
 export const api = axios.create({
   baseURL: 'https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com',

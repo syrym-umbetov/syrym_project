@@ -66,6 +66,7 @@ const ProductDetail = () => {
               >
                 {productDetail?.articlesList.map((color, index) => (
                   <div
+                    key={index}
                     className='colors'
                     style={{
                       backgroundColor: color.color.rgbColor,

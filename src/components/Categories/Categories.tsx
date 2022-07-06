@@ -28,12 +28,14 @@ const Wrapper = styled('div')`
 
 const Categories: FC<CategoriesProps> = ({ category, open, setOpen }) => {
   const { CatName, CategoryValue, CategoriesArray, tagCodes } = category;
+  console.log(CategoriesArray);
 
   return (
     <Wrapper>
       {CategoriesArray &&
         CategoriesArray.map((item) => (
           <ul
+            key={item.CatName}
             onMouseEnter={(e) => setOpen(true)}
             onMouseLeave={(e) => setOpen(false)}
           >
@@ -41,7 +43,7 @@ const Categories: FC<CategoriesProps> = ({ category, open, setOpen }) => {
             {item &&
               item.CategoriesArray &&
               item.CategoriesArray.map((list) => (
-                <li style={{ marginLeft: '20px' }}>
+                <li key={list.CatName} style={{ marginLeft: '20px' }}>
                   <Link
                     style={{ textDecoration: 'none', color: 'black' }}
                     to={`/categories/${CategoryValue}/${item.CategoryValue}/${list.CategoryValue}`}

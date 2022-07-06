@@ -35,6 +35,7 @@ const SortBy: FC<SortByProps> = ({ sort, handleSort, selectionProps }) => {
       >
         {selectionProps.options.map((item) => (
           <MenuItem
+            key={item.displayedName}
             sx={{ fontFamily: 'Open Sans Condensed' }}
             value={item.value}
           >

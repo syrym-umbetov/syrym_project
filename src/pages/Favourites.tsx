@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import FavouritesItemCard from '../components/FavouritesItemCard';
 import { useFavourites } from '../context/FavouritesContext';
 
@@ -8,9 +8,7 @@ const Favourites = () => {
   return (
     <div>
       {favouritesItems &&
-        favouritesItems.map((id) => <FavouritesItemCard key={id} id={id} />)}
-      Опять рисует
-      <hr />
+        favouritesItems.map((id) => <FavouritesItemCard id={id} />)}
     </div>
   );
 };

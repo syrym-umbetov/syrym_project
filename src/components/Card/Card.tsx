@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import './Card.css';
 
 import styled from '@emotion/styled';
@@ -8,16 +8,9 @@ import { Link } from 'react-router-dom';
 import { CardProps } from '../../types';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useFavourites } from '../../context/FavouritesContext';
-import IconButton from '@mui/material/IconButton';
+import { ImageWrapper } from '../../utils/variables';
 
 const Card: FC<CardProps> = ({ item }) => {
-  const ImageWrapper = styled('div')`
-    width: 100%;
-    img {
-      width: 100%;
-    }
-  `;
-
   const Count = styled('div')`
     display: flex;
     align-items: center;
